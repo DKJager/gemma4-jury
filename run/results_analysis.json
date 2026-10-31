@@ -1,0 +1,212 @@
+{
+ "n_items": 300,
+ "resolved": 150,
+ "judges": {
+  "deepseek-v4-flash": {
+   "auroc": 0.7462,
+   "brier": 0.2687,
+   "n": 294,
+   "coverage": 0.98,
+   "maker": "DeepSeek",
+   "auroc_ci95": [
+    0.7,
+    0.793
+   ]
+  },
+  "gemma-3-27b": {
+   "auroc": 0.5567,
+   "brier": 0.4472,
+   "n": 297,
+   "coverage": 0.99,
+   "maker": "Google",
+   "auroc_ci95": [
+    0.519,
+    0.595
+   ]
+  },
+  "gemma-4-e2b": {
+   "auroc": 0.5772,
+   "brier": 0.3996,
+   "n": 256,
+   "coverage": 0.8533,
+   "maker": "Google",
+   "auroc_ci95": [
+    0.536,
+    0.619
+   ]
+  },
+  "gemma-4-e4b": {
+   "auroc": 0.6685,
+   "brier": 0.3352,
+   "n": 284,
+   "coverage": 0.9467,
+   "maker": "Google",
+   "auroc_ci95": [
+    0.604,
+    0.725
+   ]
+  },
+  "glm-5.2": {
+   "auroc": 0.8376,
+   "brier": 0.2271,
+   "n": 268,
+   "coverage": 0.8933,
+   "maker": "Zhipu",
+   "auroc_ci95": [
+    0.789,
+    0.88
+   ]
+  },
+  "gpt-oss-120b": {
+   "auroc": 0.7754,
+   "brier": 0.2493,
+   "n": 300,
+   "coverage": 1.0,
+   "maker": "OpenAI",
+   "auroc_ci95": [
+    0.722,
+    0.827
+   ]
+  },
+  "ibm-granite-4-small": {
+   "auroc": 0.5769,
+   "brier": 0.3674,
+   "n": 300,
+   "coverage": 1.0,
+   "maker": "IBM",
+   "auroc_ci95": [
+    0.524,
+    0.624
+   ]
+  },
+  "ibm-llama4-maverick": {
+   "auroc": 0.6256,
+   "brier": 0.3976,
+   "n": 299,
+   "coverage": 0.9967,
+   "maker": "Meta",
+   "auroc_ci95": [
+    0.582,
+    0.669
+   ]
+  },
+  "ibm-mistral-small": {
+   "auroc": 0.6657,
+   "brier": 0.3352,
+   "n": 299,
+   "coverage": 0.9967,
+   "maker": "Mistral",
+   "auroc_ci95": [
+    0.602,
+    0.727
+   ]
+  },
+  "qwen3-235b": {
+   "auroc": 0.7051,
+   "brier": 0.3346,
+   "n": 300,
+   "coverage": 1.0,
+   "maker": "Alibaba",
+   "auroc_ci95": [
+    0.646,
+    0.755
+   ]
+  }
+ },
+ "ensemble_all": {
+  "auroc": 0.7663,
+  "brier": 0.2753
+ },
+ "same_maker_google_triple": {
+  "auroc": 0.6911,
+  "brier": 0.3492
+ },
+ "cross_maker_triples": {
+  "count": 98,
+  "auroc_median": 0.7587,
+  "auroc_min": 0.6555,
+  "auroc_max": 0.8403,
+  "best": [
+   [
+    "deepseek-v4-flash",
+    "glm-5.2",
+    "gpt-oss-120b"
+   ],
+   null
+  ],
+  "share_beating_same_maker": 0.939
+ },
+ "agreement_curve_best_cross_triple": [
+  {
+   "k": 1,
+   "coverage": 0.82,
+   "precision": 0.6016260162601627
+  },
+  {
+   "k": 2,
+   "coverage": 0.7566666666666667,
+   "precision": 0.6255506607929515
+  },
+  {
+   "k": 3,
+   "coverage": 0.5633333333333334,
+   "precision": 0.7041420118343196
+  }
+ ],
+ "agreement_curve_all": [
+  {
+   "k": 1,
+   "coverage": 0.99,
+   "precision": 0.5050505050505051
+  },
+  {
+   "k": 2,
+   "coverage": 0.97,
+   "precision": 0.5154639175257731
+  },
+  {
+   "k": 3,
+   "coverage": 0.96,
+   "precision": 0.5208333333333334
+  },
+  {
+   "k": 4,
+   "coverage": 0.9333333333333333,
+   "precision": 0.5321428571428571
+  },
+  {
+   "k": 5,
+   "coverage": 0.9133333333333333,
+   "precision": 0.5437956204379562
+  },
+  {
+   "k": 6,
+   "coverage": 0.8766666666666667,
+   "precision": 0.5665399239543726
+  },
+  {
+   "k": 7,
+   "coverage": 0.82,
+   "precision": 0.5934959349593496
+  },
+  {
+   "k": 8,
+   "coverage": 0.76,
+   "precision": 0.6271929824561403
+  },
+  {
+   "k": 9,
+   "coverage": 0.63,
+   "precision": 0.6772486772486772
+  },
+  {
+   "k": 10,
+   "coverage": 0.43333333333333335,
+   "precision": 0.7076923076923077
+  }
+ ],
+ "gemma4_added_to_best_cross": {
+  "auroc": 0.8016,
+  "brier": 0.2254
+ }
+}
